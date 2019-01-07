@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="person" class="com.cheer.spring.model.Person">
+        <property name="name" value="阿光爱吔屎"></property>
+    </bean>
+    <bean id="empdao" class="com.cheer.spring.dao.Impl.EmpDaoImpl"></bean>
+    <bean id="empservice" class="com.cheer.spring.service.Impl.EmpServiceImpl">
+        <property name="empDao" ref="empdao"></property>
+    </bean>
+</beans>
